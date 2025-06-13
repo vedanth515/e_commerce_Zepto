@@ -1,10 +1,5 @@
-
-
-
-
-import Product from "../models/product.js";
+import Product from "../models/Product.js";
 import Order from "../models/Order.js";
-import Address from "../models/Address.js"; // ✅ ✅ ✅ FIX 1: Import Address to register schema
 import stripe from "stripe"
 import User from "../models/User.js"
 
