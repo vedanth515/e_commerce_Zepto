@@ -59,6 +59,7 @@ import addressRouter from "../routes/addressRoute.js";
 import orderRouter from "../routes/OrderRoute.js";
 import '../configs/cloudinary.js';  
 import { stripeWebhooks } from "../controllers/orderController.js";
+import connectDB from "../configs/db.js";
 
 // Create express app
 const app = express();
