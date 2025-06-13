@@ -21,10 +21,10 @@ await connectDB(); // ✅ OK to await
 // Middleware
 const allowedOrigins = ['https://e-commerce-zepto-r4ld.vercel.app'];
 
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.post('/stripe',express.raw({type:"application/json"}),stripeWebhooks)
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: allowedOrigins, credentials: true }));
 
 // Routes
 app.get('/', (req, res) => res.send("API is Working!"));
