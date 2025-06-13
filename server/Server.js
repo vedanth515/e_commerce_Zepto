@@ -19,7 +19,7 @@ const port = process.env.PORT || 4000;
 await connectDB(); // ✅ OK to await
 
 // Middleware
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['https://e-commerce-zepto-r4ld.vercel.app'];
 
 app.post('/stripe',express.raw({type:"application/json"}),stripeWebhooks)
 app.use(express.json());
