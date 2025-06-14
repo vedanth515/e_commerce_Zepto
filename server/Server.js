@@ -20,9 +20,11 @@ await connectDB(); // ✅ OK to await
 
 //  const allowedOrigins = ['http://localhost:5173']
 
-const allowedOrigins = ['https://e-commerce-zepto-r4ld.vercel.app','http://localhost:5173'];
-
 app.use(cors({ origin: allowedOrigins, credentials: true }));
+
+const allowedOrigins = ['https://e-commerce-zepto-r4ld.vercel.app'];
+
+
 app.post('/stripe',express.raw({type:"application/json"}),stripeWebhooks)
 app.use(express.json());
 app.use(cookieParser());
